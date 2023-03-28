@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+
+<body>
+    <div id="add"></div>
+
+</body>
+<script type="text/babel">
+    const add = document.getElementById('add')
+
+    function Component() {
+        return (
+            <div>
+                <h2>Le van phuong</h2>
+                <p>Cho bo cai dia chi</p>
+                <b>Em o dau day em</b>
+            </div>
+        )
+    }
+    const router = (
+        <div>
+            <Component />
+            <Component />
+            <Component />
+
+        </div>
+    )
+    ReactDOM.render(router, add)
+</script>
+
+</html>

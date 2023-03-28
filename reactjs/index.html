@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script crossorigin src="https://unpkg.com/react@18.0.0/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18.0.0/umd/react-dom.production.min.js"></script> 
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+</head>
+<body>
+    <div id="root"></div>
+</body>
+<script type="text/babel">
+    const root = document.getElementById('root')
+    // const divReact = React.createElement('div',{
+    //     className: 'post-item'
+    // }, 
+    // React.createElement('h2',{title: "Hoc React tai F8"},'Hoc reactJs'), 
+    // React.createElement('p',null, 'Hoc reactjs Tu co ban den nang cao'))
+    const  courses =[
+        {
+            name: 'HTMl,CSS'
+        },
+        {
+            name: 'responsive web'
+        },
+        {
+            name:'Javascript'
+        }
+    ]  
+
+    const h2 = React.createElement('h1',
+    {
+        title: "helle",
+        className: 'Heading'
+    }, 'Hello Guys!')
+
+    const ul = <ul>{
+        courses.map((item)=>{
+            return <li>{item.name}</li>
+        })
+    }
+        </ul>
+        ReactDOM.render([h2,ul], root)
+</script>
+
+</html>
